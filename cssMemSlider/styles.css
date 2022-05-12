@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Arial;
+     src: url("./assets/fonts/arial-regular.ttf");
+   }
+ 
+   html{
+    scroll-behavior: smooth; 
+   }
+* {
+    box-sizing: border-box;
+  }
+ .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+      
+  }
