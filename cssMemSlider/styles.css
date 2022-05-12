@@ -6,11 +6,68 @@
    html{
     scroll-behavior: smooth; 
    }
+
 * {
     box-sizing: border-box;
   }
  .wrapper {
         max-width: 1200px;
-        margin: 0 auto;
-      
+        margin: 0 auto; 
+        padding:1em;     
   }
+  body{
+      background: url("./assets/img/fon.jpg"), rgb(172 170 162);
+      background-blend-mode: soft-light;
+      font-family: 'Arial',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+
+  }
+  h1{
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+  }
+  .slider-contener{
+    height: 432px;
+	position: relative;
+    margin: 0 auto;
+	width: 432px;
+  }
+  .slider {
+	background-color: #ddd;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+input {
+	display: none;
+}
+.slides {
+	height: inherit;
+	position: absolute;
+	width: inherit;
+}
+.slide1 { 
+    background-image: url("./assets/img/slide1.jpg");
+    background-size: cover;
+}
+.slide2 { 
+    background-image: url("./assets/img/slide2.jpg");
+    background-size: cover;
+}
+.slide3 { 
+    background-image: url("./assets/img/slide3.jpg");
+    background-size: cover;
+}
+.slide4 { 
+    background-image: url("./assets/img/slide4.jpg");
+    background-size: cover;
+}
+.slide5 { 
+    background-image: url("./assets/img/slide5.jpg");
+    background-size: cover;
+}
