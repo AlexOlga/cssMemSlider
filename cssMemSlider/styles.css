@@ -81,22 +81,38 @@ input {
 }
 label {
    	cursor: pointer;
-	display: inline-block;
-    border: 2px solid #ddd;
-	height: 1rem; 
-    margin: 1rem 0.5rem 0 1rem;
-	position: relative;
-	width: 1rem;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   	height: 2rem; 
+    margin: 1rem 0.5rem 0 0;
+    width: 2rem;
 	border-radius: 50%;
 }
-label:hover{
-    background-color: #ffffff;
+
+.circle{
+    border: 2px solid #ddd;
+	height: 1rem; 
+    width: 1rem;
+	border-radius: 50%;
+    margin: 0 auto;  
+    transition: all 150ms ease-in-out;
 }
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide2:checked ~ .controls label:nth-of-type(2),
-#slide3:checked ~ .controls label:nth-of-type(3),
-#slide4:checked ~ .controls label:nth-of-type(4),
-#slide5:checked ~ .controls label:nth-of-type(5) {
+	
+	
+label:hover .circle{
+    background-color: #ffffff;
+   
+}
+label:active .circle{
+    box-shadow: 0 0 10px #f3f7f6 inset, 0 0 10px 4px #017664;
+}
+#slide1:checked ~ .controls label > .circle1,
+#slide2:checked ~ .controls label  > .circle2,
+#slide3:checked ~ .controls label  > .circle3,
+#slide4:checked ~ .controls label > .circle4,
+#slide5:checked ~ .controls label > .circle5 {
 	background-color: #017664;
 }
 
@@ -105,7 +121,7 @@ label:hover{
 #slide3:checked ~ .slider > .slide3,
 #slide4:checked ~ .slider > .slide4,
 #slide5:checked ~ .slider > .slide5 {
-    transition: opacity 1s linear;
+    transition: opacity 0.5s linear;
     opacity: 1;
 	z-index: 1;
 	
@@ -115,7 +131,7 @@ label:hover{
 	position: absolute;
 	opacity: 0;
     z-index: 0;
-    transition: opacity 1s linear;
+    transition: opacity 0.5s linear;
 }
 
 #slide1:checked ~ .text-contener > .text1,
