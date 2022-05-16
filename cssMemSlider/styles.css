@@ -111,8 +111,8 @@ label {
 }
 	
 	
-label:hover .circle{
-    background-color: #ffffff;
+.control:hover .circle{
+    background-color: #ffffff !important;
    
 }
 label:active .circle{
