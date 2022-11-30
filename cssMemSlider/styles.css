@@ -1,129 +1,121 @@
 @font-face {
-    font-family: Arial;
-     src: url("./assets/fonts/arial-regular.ttf");
-   }
- 
-   html{
-    scroll-behavior: smooth; 
-   }
+ font-family: Arial;
+ src: url("./assets/fonts/arial-regular.ttf");
+} 
+html {
+ scroll-ehavior: smooth; 
+}
 
 * {
-    box-sizing:border-box;
-  }
- .wrapper {
-        margin: 0 auto; 
-        padding:1rem;            
-  }
-  body{
-      background: url("./assets/img/fon1.jpg");
-      font-family: 'Arial',sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      height: 100vh;
-      font-size: 1rem;
-      letter-spacing: 0.1rem;
+ box-sizing:border-box;
+ }
 
+.wrapper {
+ margin: 0 auto; 
+ padding:1rem;            
   }
-  h1{
-    color: #fffffe;
-    font-size: 2rem;
-    margin: 1rem;
-    letter-spacing: 0.2rem; 
-  }
-  .slider-contener{
-    display: grid;
-    gap: 0.5rem;
-    position: relative;
-    width: 80vw;
-    height: 60vh;
-	margin: 0 auto;
-	grid-template-areas:"mem mem"
-                        "text-content nav"
-  }
-  .slider {
-	background-color: #ddd;
-	height: inherit;
-	overflow: hidden;
-	position: relative;
-	width: inherit;	
-    border-radius: 1rem;
-    background-color:rgba(0, 0, 0, 0.5);
-    grid-area: mem;
+
+body {
+ background: url("./assets/img/fon1.jpg");
+ font-family: 'Arial',sans-serif;
+ font-style: normal;
+ font-weight: 400;
+ height: 100vh;
+ font-size: 1rem;
+ letter-spacing: 0.1rem;
+ }
+h1{
+ color: #fffffe;
+ font-size: 2rem;
+ margin: 1rem;
+ letter-spacing: 0.2rem; 
+ }
+.slider-contener{
+ display: grid;
+ gap: 0.5rem;
+ position: relative;
+ width: 80vw;
+ height: 60vh;
+ margin: 0 auto;
+ grid-template-areas:"mem mem"
+                     "text-content nav"
+ }
+.slider {
+  background-color: #ddd;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  width: inherit;	
+  border-radius: 1rem;
+  background-color:rgba(0, 0, 0, 0.5);
+  grid-area: mem;
 }
 input {
-	display: none;
+  display: none;
 }
 .slides {
-	height: inherit;
-	position: absolute;
-	width: inherit;
-    opacity: 0;
-    z-index: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position:center ; 
-    transition: opacity 1s linear;
+  height: inherit;
+  position: absolute;
+  width: inherit;
+  opacity: 0;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center ; 
+  transition: opacity 1s linear;
 }
 .slide1 { 
-    background-image: url("./assets/img/slide1.jpg");
+  background-image: url("./assets/img/slide1.jpg");
 }
    
 .slide2 { 
-    background-image: url("./assets/img/slide2.jpg");
-  
-}
+  background-image: url("./assets/img/slide2.jpg");
+  }
 .slide3 { 
-    background-image: url("./assets/img/slide3.jpg");
- 
-}
+  background-image: url("./assets/img/slide3.jpg");
+ }
 .slide4 { 
-    background-image: url("./assets/img/slide4.jpg");
-  
-}
+  background-image: url("./assets/img/slide4.jpg");
+  }
 .slide5 { 
-    background-image: url("./assets/img/slide5.jpg");
-    
-}
+  background-image: url("./assets/img/slide5.jpg");
+  }
 .controls {
-    display:flex;
-	grid-area: nav;
-    justify-self:end;
-    }
+  display:flex;
+  grid-area: nav;
+  justify-self:end;
+  }
 label {   
-   	cursor: pointer;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-   	height: 3rem; 
-    margin: 0 0.3rem 0 0;
-    width: 2rem;
-	border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 3rem; 
+  margin: 0 0.3rem 0 0;
+  width: 2rem;
+  border-radius: 50%;
 }
-
 .circle{
-    border: 2px solid #ddd;
-	height: 1rem; 
-    width: 1rem;
-	border-radius: 50%;
-    margin: 0 auto;  
-    transition: all 150ms ease-in-out;
-}
-	
-	
+  border: 2px solid #ddd;
+  height: 1rem; 
+  width: 1rem;
+  border-radius: 50%;
+  margin: 0 auto;  
+  transition: all 150ms ease-in-out;
+}	
 .control:hover .circle{
-    background-color: #ffffff !important;
-   
+  background-color: #ffffff !important;   
 }
 label:active .circle{
-    box-shadow: 0 0 10px #f3f7f6 inset, 0 0 10px 4px #017664;
+  box-shadow: 0 0 10px #f3f7f6 inset, 0 0 10px 4px #017664;
 }
 #slide1:checked ~ .controls label > .circle1,
-#slide2:checked ~ .controls label  > .circle2,
-#slide3:checked ~ .controls label  > .circle3,
+#slide2:checked ~ .controls label > .circle2,
+#slide3:checked ~ .controls label > .circle3,
 #slide4:checked ~ .controls label > .circle4,
 #slide5:checked ~ .controls label > .circle5 {
-	background-color: #017664;
+  background-color: #017664;
 }
 
 #slide1:checked ~ .slider > .slide1,
@@ -131,21 +123,19 @@ label:active .circle{
 #slide3:checked ~ .slider > .slide3,
 #slide4:checked ~ .slider > .slide4,
 #slide5:checked ~ .slider > .slide5 {
-    transition: opacity 0.5s linear;
-    opacity: 1;
-	z-index: 1;
-	
+  transition: opacity 0.5s linear;
+  opacity: 1;
+  z-index: 1;
 }
 .text-contener{
-    grid-area:text-content;
-  
-}
+  grid-area:text-content;
+ }
 .text{
-    color: #fffffe;;
-	position: absolute;
-	opacity: 0;
-    z-index: 0;
-    transition: opacity 0.5s linear;
+  color: #fffffe;;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.5s linear;
 }
 
 #slide1:checked ~ .text-contener > .text1,
@@ -153,36 +143,36 @@ label:active .circle{
 #slide3:checked ~ .text-contener > .text3,
 #slide4:checked ~ .text-contener > .text4,
 #slide5:checked ~ .text-contener > .text5{
-    transition: opacity 1s linear;
-    opacity: 1;
-	z-index: 1;  
+  transition: opacity 1s linear;
+  opacity: 1;
+  z-index: 1;  
 }
 @media (orientation: landscape) {
-    .slider-contener{
-       width: 80vw;
-       height: 60vh;        
-      }
+  .slider-contener{
+    width: 80vw;
+    height: 60vh;        
+    }
 }
 @media (orientation: portrait) {
     .slider-contener{
-       width: 80vw;
-       height: 80vw;        
+      width: 80vw;
+      height: 80vw;        
       }
 }
 @media (max-width: 768px) { 
     .slider-contener{
-        grid-template-areas:"mem"
+       grid-template-areas:"mem"
                             "nav"
                             "text-content"
       }
     .controls {
-        justify-self:center;
-        }
+      justify-self:center;
+      }
     .text{
-        margin: 0;
+      margin: 0;
     }
     h1{
-        font-size: 1.5rem;
-        margin: 0.5rem;       
+      font-size: 1.5rem;
+      margin: 0.5rem;       
       }
 }
